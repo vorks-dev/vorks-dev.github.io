@@ -1,0 +1,20 @@
+{
+    "version": 1,
+    "data": [
+        {
+            "name": "Gradia",
+            "icon": "https://vorks-dev.github.io/gradia/img/app_icon.png",
+            "url": "https://vorks-dev.github.io/gradia/"
+        },
+        {
+            "name": "Lysa",
+            "icon": "https://vorks-dev.github.io/lysa/img/app_icon.png",
+            "url": "https://vorks-dev.github.io/lysa/"
+        },
+        {
+            "name": "DataManager.js",
+            "icon": "https://datamanager.js.org/logo.svg",
+            "url": "https://datamanager.js.org"
+        }
+    ]
+}

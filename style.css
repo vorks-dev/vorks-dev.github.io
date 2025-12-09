@@ -1,0 +1,177 @@
+:root {
+    --background-color: #00020F;
+    --branded-background-color: color-mix(in srgb, color-mix(in srgb, var(--background-color) 80%, var(--brand-color) 20%) 90%, var(--font-color) 10%);
+    --font-color: #FDFAEC;
+    --brand-color: #9137BE;
+    --brand-highlight-color: #EEB1D5;
+
+    --main-font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, Helvetica, sans-serif;
+    font-size: clamp(120%, 87.5% + 0.5vw, 150%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--background-color);
+    color: var(--font-color);
+    font-family: var(--main-font-family);
+
+    margin: 0;
+}
+
+div.wrapper {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+main.content {
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    max-width: 80ch;
+}
+
+a[href], a:visited {
+    color: var(--brand-color);
+    font-weight: 800;
+    text-decoration: underline;
+}
+a[href]:hover {
+    color: var(--brand-highlight-color);
+}
+a[href]:hover > i > svg {
+    fill: var(--brand-highlight-color);
+}
+
+::selection {
+    background-color: var(--brand-color);
+    color: #fff;
+}
+
+/*----- Sections -----*/
+section.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+section.logo > a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.logo > a > img {
+    width: 100%;
+    max-width: 50ch;
+    height: auto;
+    max-height: 10vh;
+}
+
+section.appCloud {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+section.appCloud > div {
+    display: flex;
+    justify-content: center;
+    gap: 3vh;
+}
+section.appCloud > div > a {
+    width: 20%;
+}
+section.appCloud > div > a > img {
+    width: 100%;
+    min-width: 5vh;
+    max-width: 15vh;
+    height: auto;
+    border-radius: 22%;
+    box-shadow: 0 0 12px 4px var(--branded-background-color);
+    transition: transform 0.3s ease;
+}
+section.appCloud > div > a > img:hover {
+    transform: scale(1.1);
+}
+
+section.text p {
+    font-style: italic;
+    margin-block-start: 0.25rem;
+}
+section.text h1 {
+    margin-block-start: 0.5rem;
+    margin-block-end: 0.5rem;
+}
+section.text h2 {
+    margin-block-start: 0.3rem;
+    margin-block-end: 0.3rem;
+}
+section.text h3 {
+    margin-block-start: 0.2rem;
+    margin-block-end: 0.2rem;
+}
+section.text h4 {
+    margin-block-start: 0.2rem;
+    margin-block-end: 0.1rem;
+}
+
+
+/*----- FOOTER -----*/
+footer {
+    border-top: solid 1px var(--branded-background-color);
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    font-size: 0.8rem;
+}
+footer ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+footer ul > li:not(:last-child) {
+    margin-bottom: 0.3rem;
+}
+footer ul > li a[href] {
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+footer .socials {
+    display: flex;
+    gap: 0.8rem;
+    font-size: 1.3rem;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 375px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    footer > * {
+        width: 100%;
+    }
+    footer .socials {
+        gap: 0;
+    }
+    footer .socials > a {
+        flex: 1;
+        max-height: 1.5rem;
+    }
+    footer .socials > a:not(:last-child) {
+        border-right: solid 0.1rem var(--font-color);
+    }
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /impressum
+Disallow: /privacy
+Sitemap: https://vorks-dev.github.io/sitemap.xml
