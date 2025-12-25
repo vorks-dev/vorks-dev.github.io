@@ -1,0 +1,90 @@
+{
+    "format": "article-collection",
+    "version": 1,
+    "lastChanged": "2025-11-19",
+    "range": {
+        "from": "2024-01-01",
+        "to": "2025-12-31"
+    },
+    "articles": [
+        {
+            "id": "60693c",
+            "slug": "lysa-your-photos-in-beauty",
+            "title": "Lysa - Your Photos in Beauty",
+            "date": "2025-11-19",
+            "tags": ["lysa", "product", "release", "desktop", "photos"],
+            "authors": ["@jrmyv"],
+            "changes": [],
+            "summary": "A lightweight, native desktop photo organizer that focuses on clarity, performance, and privacy. Lysa automatically extracts metadata to organize large collections, offering full-resolution viewing without cloud sync or tracking.",
+            "content": {
+                "format": "markdown",
+                "encoding": "utf-8",
+                "body": "Lysa is a lightweight desktop photo organizer built to focus on what matters most: your photos.\n\nAs the first native application developed under the vorks. philosophy, Lysa runs fully on-device and is designed to feel fast, quiet, and unobtrusive. It avoids unnecessary abstractions and instead emphasizes clarity, performance, and visual balance.\n\nLysa automatically extracts file and EXIF metadata to help organize photo libraries without requiring manual input. Folders become albums, metadata becomes structure, and navigation stays fluid even in large collections.\n\nKey capabilities include:\n\n- Gallery-style browsing of local photo directories\n- Automatic extraction of file and EXIF metadata\n- Flexible sorting based on technical and temporal attributes\n- Full-resolution viewing with zoom, pan, and detailed inspection\n\nBuilt with C++ and Qt/QML, Lysa is a fully native application with a modern interface and minimal footprint. No cloud sync, no tracking, no hidden data flow - your photos remain exactly where they belong.\n\nLysa is open-source and available via **[GitHub Releases](https://github.com/vorks-dev/lysa/releases/latest)**."
+            }  
+        },
+        {
+            "id": "a70bd4",
+            "slug": "new-branding-same-mission",
+            "title": "New branding, same mission",
+            "date": "2025-11-02",
+            "tags": ["vorks", "brand"],
+            "authors": ["@jrmyv"],
+            "changes": [],
+            "summary": "vorks. unveils a refreshed brand identity emphasizing minimalism, reliability, and user-centered design while maintaining its commitment to privacy, on-device operation, and open-source transparency.",
+            "content": {
+                "format": "markdown",
+                "encoding": "utf-8",
+                "body": "vorks. is the result of a brand merge guided by a simple idea: software should be built around what truly matters to the user.\n\nThe new name and visual identity reflect a clearer focus on minimalism, reliability, and long-term usability. While the appearance has evolved, the underlying principles remain unchanged.\n\nAt vorks., products are designed to *just vork*. They aim to stay out of the way, avoid unnecessary complexity, and feel dependable in everyday use. Decisions are made with empathy for the end user, prioritizing clarity over features and usefulness over noise.\n\nPrivacy and data integrity are treated as fundamental requirements. Wherever possible, applications are designed to run fully on-device, ensuring users remain in control of their data at all times.\n\nTransparency is equally important. Open-source development allows anyone to inspect how things work under the hood and builds trust through verifiability rather than promises.\n\nThis new branding is not a change in direction, but a clearer expression of intent. vorks. continues to focus on thoughtful, accessible software that works quietly, reliably, and with respect for the people who use it."
+            }
+        },
+        {
+            "id": "29adc6",
+            "slug": "gradia-1-1-update-with-new-features",
+            "title": "Gradia 1.1 – Update with new features",
+            "date": "2025-07-10",
+            "tags": ["gradia", "release", "update"],
+            "authors": ["@jrmyv"],
+            "changes": [],
+            "summary": "Gradia 1.1 introduces enhanced grade management, including partial data deletion, downloadable grade files, version history, and automatic table sorting, along with the standalone datamanager.js module for improved internal data handling.",
+            "content": {
+                "format": "markdown",
+                "encoding": "utf-8",
+                "body": "Gradia 1.1 marks the first major update since the initial release.\n\nAfter a series of internal improvements and smaller iterations, this release introduces several new features designed to make grade management more efficient and flexible:\n\n- **Partial data deletion**: Settings and grades can now be removed independently\n- **Downloadable grade files** in `.grd` / `.grde` format\n- **Version history**: Update information is now available directly within the app\n- **Automatic table sorting** for improved grade navigation\n\nAs part of this update, Gradia’s internal data handling was significantly restructured. This work resulted in the creation of **[datamanager.js](https://datamanager.js.org)**, now available as a standalone module.\n\nAll improvements are bundled into this release. Existing users are encouraged to update and explore the new tools. New users can get started at **[Gradia](/gradia)**."
+            }
+        },
+        {
+            "id": "6e3432",
+            "slug": "introducing-datamanager-js",
+            "title": "Introducing datamanager.js",
+            "date": "2025-06-03",
+            "tags": ["javascript", "library", "product", "release"],
+            "authors": ["@jrmyv"],
+            "changes": [],
+            "summary": "A lightweight JavaScript module for client-side data management, including file handling, localStorage interaction, and data validation. Designed for developers needing a focused, reliable utility without unnecessary abstractions.",
+            "content": {
+                "format": "markdown",
+                "encoding": "utf-8",
+                "body": "During the development of Gradia, a need emerged for a consistent and reusable way to manage client-side data.\n\nThat requirement led to **[datamanager.js](https://datamanager.js.org)**.\n\nThe module focuses on handling the full data lifecycle of a web application, including:\n\n- File uploads and downloads\n- `localStorage` interaction\n- Internal data validation and integrity\n\nIt intentionally ships without a user interface - no abstractions beyond what’s necessary. A small, focused utility that does its job reliably.\n\nIf you’re building a JavaScript project and need a lightweight solution for persistent client-side data management, **[datamanager.js](https://datamanager.js.org)** is worth a look."
+            }
+        },
+        {
+            "id": "1f9c2a",
+            "slug": "gradia-the-modern-grade-calculator",
+            "title": "Gradia – The modern grade calculator",
+            "date": "2024-10-20",
+            "tags": ["gradia", "product", "release"],
+            "authors": ["@jrmyv"],
+            "changes": [],
+            "summary": "Gradia is a modern, offline-first grade calculator that helps track academic performance securely on-device, offering flexible grading workflows and multi-year support.",
+            "content": {
+                "format": "markdown",
+                "encoding": "utf-8",
+                "body": "Gradia is a modern grade calculator designed to make long-term academic tracking simple and reliable.\n\nFrom the start, the focus has been on combining flexibility with a clean, offline-first experience. Gradia supports a wide range of grading workflows while keeping all data securely on-device.\n\nKey features include:\n\n- Grade management across multiple school years\n- Freely adjustable grade weights\n- Local, on-device data storage\n- Full offline support without restrictions\n\nGradia continues to evolve, with additional features planned for future releases. If you’re looking for a dependable way to track and manage academic performance, get started at **[Gradia](/gradia)**."
+            }
+        }
+    ],
+    "previous": {
+        "path": null,
+        "lastChanged": null
+    }
+}

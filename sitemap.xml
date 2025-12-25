@@ -6,4 +6,7 @@
     <sitemap>
         <loc>https://vorks-dev.github.io/apps/sitemap.xml</loc>
     </sitemap>
+    <sitemap>
+        <loc>https://vorks-dev.github.io/blog/sitemap.xml</loc>
+    </sitemap>
 </sitemapindex>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vorks.blog</title>
+
+    <link rel="stylesheet" href="/style.css">
+    <script type="module" src="/blog/main.js"></script>
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <meta property="og:site_name" content="vorks.">
+    <meta property="og:image" content="https://vorks-dev.github.io/social-card.png">
+</head>
+<body>
+    <div class="wrapper">
+    <header>
+        <div class="content-wrapper">
+            <a href="/"><img class="logo" src="/logo.svg" alt="vorks. logo"></a>
+            <nav class="navigation">
+                <button aria-label="Toggle theme color" id="themeToggleButton"><i aria-hidden="true" id="themeToggleIcon" class="sun-icon"></i></button>
+                <a aria-label="Open blog overview" href="/blog/"><i aria-hidden="true" class="grid-icon"></i></a>
+            </nav>
+        </div>
+    </header>
+    <main class="content">
+        <article id="not-found" class="spa-site">
+            <section class="text">
+                <h1>Not found</h1>
+                <p>The requested Article wasn't found.</p>
+                <p>But don't worry, let's get you <a href="/blog/">back on the track</a></p>
+            </section>
+        </article>
+        <article id="overview" class="spa-site">
+            <section class="article-grid" id="latestArticles">
+            </section>
+        </article>
+        <article id="article" class="spa-site">
+            <section class="article-head">
+                <p class="articleDate">
+                    <time aria-label="Published on" id="published"></time>
+                    <span id="edited"></span>
+                </p>
+                <h1 id="title"></h1>
+            </section>
+            <section id="article-body"></section>
+            <section class="crossArticleNavigation">
+                <a id="previous" aria-label="Previous article"><i class="chevron-left-icon navigationArrow" aria-hidden="true"></i><span id="previousText"></span></a>
+                <a id="next" aria-label="Next article"><span id="nextText"></span><i class="chevron-right-icon navigationArrow" aria-hidden="true"></i></a>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <div class="content-wrapper">
+            <nav class="links">
+                <ul>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li lang="de"><a href="/impressum/">Impressum</a></li>
+                    <li lang="de"><a href="/privacy/">Datenschutzerklärung</a></li>
+                    <li>&copy 2025 vorks.</li>
+                </ul>
+            </nav>
+            <div class="socials">
+                <a href="https://instagram.com/vorks.dev" target="_blank" aria-label="Visit us on Instagram"><i class="instagram-icon"></i></a>
+                <a href="https://github.com/vorks-dev/" target="_blank" aria-label="Visit us on GitHub"><i class="github-icon"></i></a>
+                <a href="https://vorks-dev.bsky.social" target="_blank" aria-label="Visit us on Bluesky"><i class="bluesky-icon"></i></a>
+                <a href="https://reddit.com/u/vorks-dev" target="_blank" aria-label="Visit us on Reddit"><i class="reddit-icon"></i></a>
+                <a href="https://mastodon.social/@vorks" target="_blank" aria-label="Visit us on Mastodon"><i class="mastodon-icon"></i></a>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>

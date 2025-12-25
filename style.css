@@ -1,7 +1,9 @@
 :root {
-    --background-color: #00020F;
+    --dark-color: #00020F;
+    --bright-color: #FDFAEC;
+    --background-color: var(--dark-color);
     --branded-background-color: color-mix(in srgb, color-mix(in srgb, var(--background-color) 80%, var(--brand-color) 20%) 90%, var(--font-color) 10%);
-    --font-color: #FDFAEC;
+    --font-color: var(--bright-color);
     --brand-color: #9137BE;
     --brand-highlight-color: #EEB1D5;
 
@@ -11,6 +13,22 @@
 
 * {
     box-sizing: border-box;
+}
+
+html.theme-transition *,
+html.theme-transition *::before,
+html.theme-transition *::after {
+  transition:
+    background-color 200ms ease,
+    color 200ms ease,
+    border-color 200ms ease,
+    fill 200ms ease,
+    stroke 200ms ease;
+}
+
+:focus-visible {
+    outline: 2px solid var(--font-color);
+    outline-offset: 2px;
 }
 
 body {
@@ -33,25 +51,40 @@ main.content {
     flex-flow: column nowrap;
     gap: 1rem;
     margin: 1rem auto;
-    padding: 1.5rem;
+    padding: 0 1.5rem 1.5rem;
+    width: 100%;
     max-width: 80ch;
 }
 
-a[href], a:visited {
+a[href], a:visited, button {
+    background: none;
+    border: none;
     color: var(--brand-color);
     font-weight: 800;
     text-decoration: underline;
+    cursor: pointer;
 }
-a[href]:hover {
+a[href]:hover, button:hover {
     color: var(--brand-highlight-color);
 }
-a[href]:hover > i > svg {
+a[href]:hover i > svg, button:hover > i > svg {
     fill: var(--brand-highlight-color);
+}
+
+i:has(> svg) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 ::selection {
     background-color: var(--brand-color);
     color: #fff;
+}
+
+.spa-site {
+    display: none;
+    width: 100%;
 }
 
 /*----- Sections -----*/
@@ -106,7 +139,8 @@ section.text p {
     font-style: italic;
     margin-block-start: 0.25rem;
 }
-section.text h1 {
+section.text h1, section.article-head h1 {
+    font-size: 2rem;
     margin-block-start: 0.5rem;
     margin-block-end: 0.5rem;
 }
@@ -123,18 +157,141 @@ section.text h4 {
     margin-block-end: 0.1rem;
 }
 
+section.article-head > p {
+    margin: 0;
+}
+section.article-head .articleDate {
+    font-style: italic;
+}
+section.article-head > h1#title {
+    margin-top: 0;
+    font-size: 2rem;
+    line-height: 2.15rem;
+}
+
+section#article-body > p:first-child {
+    margin-top: 0;
+}
+
+section.crossArticleNavigation {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+section.crossArticleNavigation > a {
+    max-width: 42vw;
+    text-wrap: balance;
+    color: var(--font-color);
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+section.crossArticleNavigation > a:last-child {
+    text-align: end;
+}
+section.crossArticleNavigation > a > i.navigationArrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.crossArticleNavigation > a.empty * {
+    display: none;
+}
+
+section.article-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+    gap: 1rem;
+}
+section.article-grid > a {
+    color: var(--font-color);
+    text-decoration: none;
+    font-weight: inherit;
+    display: flex;
+}
+section.article-grid article {
+    padding: 1rem;
+    border: solid 1px var(--branded-background-color);
+    display: flex;
+    flex-direction: column;
+}
+section.article-grid article > time {
+    font-size: 0.9rem;
+    font-style: italic;
+}
+section.article-grid article > h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+section.article-grid article > p {
+    flex: 1;
+}
+section.article-grid article > .articleOpener {
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: end;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+section.article-grid article > .articleOpener > i > svg {
+    height: 0.8rem;
+}
+
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    width: 100%;
+    max-width: 80ch;
+}
+
+
+/*----- HEADER -----*/
+header {
+    border-bottom: solid 1px var(--branded-background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header img.logo {
+    height: 3rem;
+    max-width: 45vw;
+}
+header nav.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.25rem;
+}
+header a > i, header button > i {
+    font-size: 1.8rem;
+}
+header a > i > svg, header button > i > svg {
+    max-width: 17.5vw;
+}
+
 
 /*----- FOOTER -----*/
 footer {
     border-top: solid 1px var(--branded-background-color);
-    padding: 1rem 1.5rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+}
+footer > .content-wrapper {
     align-items: flex-start;
-    gap: 2rem;
-    font-size: 0.8rem;
+    padding: 1rem 1.5rem;
 }
 footer ul {
+    font-size: 0.8rem;
     list-style-type: none;
     padding-inline-start: 0;
     margin-block-start: 0;
@@ -156,12 +313,13 @@ footer .socials {
     justify-content: flex-end;
 }
 
-@media screen and (max-width: 375px) {
-    footer {
+@media screen and (max-width: 430px) {
+    footer > .content-wrapper {
         flex-direction: column;
         text-align: center;
+        gap: 1.5rem;
     }
-    footer > * {
+    footer > .content-wrapper > * {
         width: 100%;
     }
     footer .socials {
