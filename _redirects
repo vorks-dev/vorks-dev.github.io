@@ -1,1 +1,5 @@
-/blog/*   /blog/   200
+# Serve real blog assets normally
+/blog/assets/*   /blog/assets/:splat   200
+
+# Catch-all for all other /blog/* requests → SPA index
+/blog/*          /blog/           200
