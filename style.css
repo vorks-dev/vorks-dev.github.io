@@ -204,7 +204,7 @@ section.crossArticleNavigation > a.empty * {
 section.article-grid {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(30ch, 100%), 100%));
     gap: 1rem;
 }
 section.article-grid > a {
